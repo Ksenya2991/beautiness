@@ -1,0 +1,286 @@
+@use "sass:math";
+@function toVw($target) {
+    $vw-context: (1440 * 0.01) * 1px;
+    @return math.div($target, $vw-context) * 1vw;
+}
+
+@import "colors.scss";
+
+@import "mixins.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Playfair+Display&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    background-color: $c-white;
+    width: 100%;
+}
+
+.burger{
+    display: none;
+    @include media(phone-only){
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: none;
+    }
+    hr{
+        border: none;
+        height: 7px;
+        background-color: $c-bell-blue;
+    }
+    &:active{
+        box-shadow: 0 0 5px 1px gray;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: toVw(18px);
+    color: $c-brown;
+    line-height: 30px;
+    font-family: 'Manrope';
+    @include media(phone-only){
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+.active{
+    color: #5C8692;;
+}
+
+.btn-blue-bg{
+    background-color: $c-bell-blue;
+    border: none;
+    .btn-link{
+        color: $c-white;
+        font-family: 'Manrope';
+        font-size: toVw(14px);
+        text-transform: uppercase;
+        @include media(phone-only){
+            font-size: 10px;
+        }
+    }
+    &:active{
+        background-color: #74a8b7;
+    }
+}
+
+.highlights{
+    font-size: toVw(15px);
+    color: $c-bell-blue;
+    text-transform: uppercase;
+    font-family: 'Manrope';
+    @include media(phone-only){
+        font-size: 10px;
+    }
+}
+
+.nav__container{
+    @include flex-between();
+    padding: toVw(20px) toVw(30px);
+    @include media(phone-only){
+        padding: 15px 15px;
+    }
+    &__block{
+        @include align-items-center();
+        &__logo{
+            @include media(phone-only){
+                margin-left: 45px;
+            }
+            .logo-img{
+                width: toVw(192px);
+                height: toVw(35px);
+                @include media(phone-only){
+                    width: 130px;
+                    height: 23px;
+                }
+            }
+        }
+        &__phone-num{
+            @include media(phone-only){
+                display: none;
+            }
+            a{
+                font-size: toVw(16px);
+                color: $c-dark;
+                font-family: 'Manrope';
+                position: relative;
+                &::after{
+                    @include after();
+                    background-image: url(../imgs/phone-icon.svg);
+                    @include bg-default();
+                    width: toVw(24px);
+                    height: toVw(25px);
+                    left: toVw(-40px);
+                    top: toVw(-3px);
+                }
+            }
+        }
+        &__menu{
+            .menu-list{
+                @include flex-between();
+                list-style: none;
+                width: toVw(380px);
+                @include media(phone-only){
+                    display: none;
+                }
+                .item_link{
+                    font-family: 'Manrope';
+                    font-size: toVw(17px);
+                    color: $c-dark;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &__socials{
+            width: toVw(84px);
+            height: toVw(19px);
+            @include align-items-center();
+            @include media(phone-only){
+                display: none;
+            }
+        }
+        &__btn{
+            .btn{
+                width: toVw(201px);
+                height: toVw(59px);
+                position: relative;
+                @include media(phone-only){
+                    width: 110px;
+                    height: 30px;
+                }
+                .btn-link{
+                    margin-left: toVw(15px);
+                    @include media(phone-only){
+                        margin-left: 12px;
+                    }
+                }
+                &::after{
+                    @include after();
+                    background-image: url(../imgs/schedule-icon.svg);
+                    @include bg-default();
+                    width: toVw(18px);
+                    height: toVw(18px);
+                    top: 35%;
+                    left: toVw(35px);
+                    @include media(phone-only){
+                        width: 10px;
+                        height: 10px;
+                        left: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .block-left{
+        width: toVw(468px);
+    }
+
+    .block-right{
+        width: toVw(727px);
+    }
+}
+
+.header-main{
+    background-color: #EBF3F5;
+    padding: toVw(120px) 0;
+    &__wrapper{
+        width: toVw(1200px);
+        margin: auto;
+        @include align-items-center();
+        @include media(phone-only){
+            flex-direction: column;
+            width: auto;
+            gap: 40px;
+        }
+        &__content{
+            span{
+                margin-left: toVw(30px);
+                position: relative;
+                @include media(phone-only){
+                    margin-left: 20px;
+                }
+                &::before{
+                    @include after();
+                    @include bg-default();
+                    background-image: url(../imgs/exclamation-point.svg);
+                    width: toVw(24px);
+                    height: toVw(24px);
+                    top: toVw(-2px);
+                    @include media(phone-only){
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+            h1{
+                font-size: toVw(55px);
+                color: $c-dark;
+                font-family: 'Playfair Display';
+                line-height: toVw(72px);
+                margin-top: toVw(3px);
+                margin-bottom: toVw(19px);
+                @include media(phone-only){
+                    font-size: 35px;
+                    line-height: 40px;
+                    margin-top: 5px;
+                    margin-bottom: 10px;
+                }
+            }
+            .btn{
+                width: toVw(238px);
+                height: 57px;
+                margin-top: toVw(26px);
+                @include media(phone-only){
+                    width: 150px;
+                    height: 35px;
+                    margin-top: 15px;
+                }
+            }
+        }
+        &__img{
+            position: relative;
+            margin-right: toVw(72px);
+            img{
+                width: toVw(550px);
+                height: 545px;
+                @include media(phone-only){
+                    width: 275px;
+                    height: 270px;
+                }
+                }
+            }
+            &::before{
+                @include after();
+                @include bg-default();
+                background-image: url(../imgs/Rectangle.svg);
+                width: toVw(592px);
+                height: toVw(645px);
+                right: toVw(100px);
+                @include media(phone-only){
+                    width: 280px;
+                    height: 300px;
+                    top: 380px;
+                    left: 85px;
+                }
+        }
+    }
+}
