@@ -48,6 +48,17 @@ a{
     text-decoration: none;
 }
 
+h3{
+    color: $c-dark;
+    font-size: toVw(26px);
+    line-height: toVw(36px);
+    font-family: 'Playfair Display';
+    @include media(phone-only){
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
 p{
     color: $c-brown;
     line-height: 30px;
@@ -77,6 +88,29 @@ p{
     }
     &:active{
         background-color: #74a8b7;
+    }
+}
+
+.btn-clear-bg{
+    background-color: transparent;
+    border: toVw(2px) solid $c-bell-blue;
+    @include media(phone-only){
+        border: 2px solid $c-bell-blue;
+    }
+    a{
+        color: $c-dark;
+        font-size: toVw(13px);
+        font-family: 'Manrope';
+        text-transform: uppercase;
+        &:active{
+            color: $c-white;
+        }
+        @include media(phone-only){
+            font-size: 10px;
+        }
+    }
+    &:active{
+        background-color: $c-bell-blue;
     }
 }
 
@@ -282,6 +316,59 @@ p{
                     width: 270px;
                     height: 290px;
                 }
+        }
+    }
+}
+
+.catalog{
+    @include flex-between();
+    margin: toVw(100px) toVw(120px);
+    @include media(phone-only){
+        gap: 30px;
+        margin-top: 50px;
+        align-items: center;
+        margin-bottom: 50px;
+        flex-direction: column;
+    }
+    &__item{
+        width: toVw(380px);
+        @include media(phone-only){
+            width: 280px;
+            text-align: center;
+        }
+        &__photo{
+            img{
+                width: toVw(380px);
+                height: toVw(288px);
+                @include media(phone-only){
+                    width: 280px;
+                    height: 188px;
+                }
+            }
+        }
+        &__content{
+            margin-top: toVw(16px);
+            margin-bottom: toVw(17px);
+            @include media(phone-only){
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            h3{
+                margin-bottom: toVw(13px);
+                @include media(phone-only){
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        &__btn{
+            .btn{
+                width: toVw(157px);
+                height: toVw(57px);
+                @include media(phone-only){
+                    width: 100px;
+                    height: 30px;
+                }
+            }
         }
     }
 }

@@ -39,6 +39,19 @@ a {
   text-decoration: none;
 }
 
+h3 {
+  color: #141414;
+  font-size: 1.8055555556vw;
+  line-height: 2.5vw;
+  font-family: "Playfair Display";
+}
+@media (max-width: 600px) {
+  h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 p {
   color: #555555;
   line-height: 30px;
@@ -73,6 +86,33 @@ p {
 }
 .btn-blue-bg:active {
   background-color: #74a8b7;
+}
+
+.btn-clear-bg {
+  background-color: transparent;
+  border: 0.1388888889vw solid #5C8692;
+}
+@media (max-width: 600px) {
+  .btn-clear-bg {
+    border: 2px solid #5C8692;
+  }
+}
+.btn-clear-bg a {
+  color: #141414;
+  font-size: 0.9027777778vw;
+  font-family: "Manrope";
+  text-transform: uppercase;
+}
+.btn-clear-bg a:active {
+  color: #FFFFFF;
+}
+@media (max-width: 600px) {
+  .btn-clear-bg a {
+    font-size: 10px;
+  }
+}
+.btn-clear-bg:active {
+  background-color: #5C8692;
 }
 
 .highlights {
@@ -324,5 +364,67 @@ p {
     left: 85px;
     width: 270px;
     height: 290px;
+  }
+}
+
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  margin: 6.9444444444vw 8.3333333333vw;
+}
+@media (max-width: 600px) {
+  .catalog {
+    gap: 30px;
+    margin-top: 50px;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
+}
+.catalog__item {
+  width: 26.3888888889vw;
+}
+@media (max-width: 600px) {
+  .catalog__item {
+    width: 280px;
+    text-align: center;
+  }
+}
+.catalog__item__photo img {
+  width: 26.3888888889vw;
+  height: 20vw;
+}
+@media (max-width: 600px) {
+  .catalog__item__photo img {
+    width: 280px;
+    height: 188px;
+  }
+}
+.catalog__item__content {
+  margin-top: 1.1111111111vw;
+  margin-bottom: 1.1805555556vw;
+}
+@media (max-width: 600px) {
+  .catalog__item__content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.catalog__item__content h3 {
+  margin-bottom: 0.9027777778vw;
+}
+@media (max-width: 600px) {
+  .catalog__item__content h3 {
+    margin-bottom: 8px;
+  }
+}
+.catalog__item__btn .btn {
+  width: 10.9027777778vw;
+  height: 3.9583333333vw;
+}
+@media (max-width: 600px) {
+  .catalog__item__btn .btn {
+    width: 100px;
+    height: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
