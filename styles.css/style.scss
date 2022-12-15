@@ -17,26 +17,26 @@
 }
 
 html, body{
-    background-color: $c-white;
     width: 100%;
+    background-color: $c-white;
 }
 
 .burger{
     display: none;
     @include media(phone-only){
+        top: 10px;
+        left: 10px;
         width: 35px;
         height: 35px;
-        position: fixed;
-        left: 10px;
-        top: 10px;
+        border: none;
         display: flex;
+        position: fixed;
         flex-direction: column;
         justify-content: space-between;
-        border: none;
     }
     hr{
-        border: none;
         height: 7px;
+        border: none;
         background-color: $c-bell-blue;
     }
     &:active{
@@ -49,9 +49,9 @@ a{
 }
 
 p{
-    font-size: toVw(18px);
     color: $c-brown;
     line-height: 30px;
+    font-size: toVw(18px);
     font-family: 'Manrope';
     @include media(phone-only){
         font-size: 12px;
@@ -64,12 +64,12 @@ p{
 }
 
 .btn-blue-bg{
-    background-color: $c-bell-blue;
     border: none;
+    background-color: $c-bell-blue;
     .btn-link{
         color: $c-white;
-        font-family: 'Manrope';
         font-size: toVw(14px);
+        font-family: 'Manrope';
         text-transform: uppercase;
         @include media(phone-only){
             font-size: 10px;
@@ -81,10 +81,10 @@ p{
 }
 
 .highlights{
-    font-size: toVw(15px);
     color: $c-bell-blue;
-    text-transform: uppercase;
+    font-size: toVw(15px);
     font-family: 'Manrope';
+    text-transform: uppercase;
     @include media(phone-only){
         font-size: 10px;
     }
@@ -116,33 +116,33 @@ p{
                 display: none;
             }
             a{
-                font-size: toVw(16px);
                 color: $c-dark;
-                font-family: 'Manrope';
                 position: relative;
+                font-size: toVw(16px);
+                font-family: 'Manrope';
                 &::after{
-                    @include after();
-                    background-image: url(../imgs/phone-icon.svg);
-                    @include bg-default();
-                    width: toVw(24px);
-                    height: toVw(25px);
-                    left: toVw(-40px);
                     top: toVw(-3px);
+                    @include after();
+                    width: toVw(24px);
+                    left: toVw(-40px);
+                    height: toVw(25px);
+                    @include bg-default();
+                    background-image: url(../imgs/phone-icon.svg);
                 }
             }
         }
         &__menu{
             .menu-list{
-                @include flex-between();
                 list-style: none;
                 width: toVw(380px);
+                @include flex-between();
                 @include media(phone-only){
                     display: none;
                 }
                 .item_link{
-                    font-family: 'Manrope';
-                    font-size: toVw(17px);
                     color: $c-dark;
+                    font-size: toVw(17px);
+                    font-family: 'Manrope';
                     &:hover{
                         text-decoration: underline;
                     }
@@ -174,17 +174,17 @@ p{
                     }
                 }
                 &::after{
+                    top: 35%;
                     @include after();
-                    background-image: url(../imgs/schedule-icon.svg);
-                    @include bg-default();
+                    left: toVw(35px);
                     width: toVw(18px);
                     height: toVw(18px);
-                    top: 35%;
-                    left: toVw(35px);
+                    @include bg-default();
+                    background-image: url(../imgs/schedule-icon.svg);
                     @include media(phone-only){
+                        left: 15px;
                         width: 10px;
                         height: 10px;
-                        left: 15px;
                     }
                 }
             }
@@ -200,54 +200,55 @@ p{
 }
 
 .header-main{
-    background-color: #EBF3F5;
     padding: toVw(120px) 0;
+    background-color: #EBF3F5;
     &__wrapper{
-        width: toVw(1200px);
         margin: auto;
+        width: toVw(1200px);
         @include align-items-center();
         @include media(phone-only){
-            flex-direction: column;
-            width: auto;
             gap: 40px;
+            width: auto;
+            flex-direction: column;
         }
         &__content{
             span{
-                margin-left: toVw(30px);
                 position: relative;
+                margin-left: toVw(30px);
                 @include media(phone-only){
                     margin-left: 20px;
                 }
                 &::before{
+                    top: toVw(-2px);
                     @include after();
-                    @include bg-default();
-                    background-image: url(../imgs/exclamation-point.svg);
                     width: toVw(24px);
                     height: toVw(24px);
-                    top: toVw(-2px);
+                    @include bg-default();
+                    background-image: url(../imgs/exclamation-point.svg);
                     @include media(phone-only){
                         width: 15px;
+                        left: -20px;
                         height: 15px;
                     }
                 }
             }
             h1{
-                font-size: toVw(55px);
                 color: $c-dark;
-                font-family: 'Playfair Display';
-                line-height: toVw(72px);
+                font-size: toVw(55px);
                 margin-top: toVw(3px);
+                line-height: toVw(72px);
                 margin-bottom: toVw(19px);
+                font-family: 'Playfair Display';
                 @include media(phone-only){
                     font-size: 35px;
-                    line-height: 40px;
                     margin-top: 5px;
+                    line-height: 40px;
                     margin-bottom: 10px;
                 }
             }
             .btn{
-                width: toVw(238px);
                 height: 57px;
+                width: toVw(238px);
                 margin-top: toVw(26px);
                 @include media(phone-only){
                     width: 150px;
@@ -260,26 +261,26 @@ p{
             position: relative;
             margin-right: toVw(72px);
             img{
-                width: toVw(550px);
                 height: 545px;
+                width: toVw(550px);
                 @include media(phone-only){
-                    width: 275px;
-                    height: 270px;
+                    width: 280px;
+                    height: 275px;
                 }
                 }
             }
             &::before{
                 @include after();
+                width: toVw(592px);
+                right: toVw(100px);
+                height: toVw(645px);
                 @include bg-default();
                 background-image: url(../imgs/Rectangle.svg);
-                width: toVw(592px);
-                height: toVw(645px);
-                right: toVw(100px);
                 @include media(phone-only){
-                    width: 280px;
-                    height: 300px;
-                    top: 380px;
+                    top: 390px;
                     left: 85px;
+                    width: 270px;
+                    height: 290px;
                 }
         }
     }

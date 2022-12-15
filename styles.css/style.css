@@ -6,8 +6,8 @@
 }
 
 html, body {
-  background-color: #FFFFFF;
   width: 100%;
+  background-color: #FFFFFF;
 }
 
 .burger {
@@ -15,20 +15,20 @@ html, body {
 }
 @media (max-width: 600px) {
   .burger {
+    top: 10px;
+    left: 10px;
     width: 35px;
     height: 35px;
-    position: fixed;
-    left: 10px;
-    top: 10px;
+    border: none;
     display: flex;
+    position: fixed;
     flex-direction: column;
     justify-content: space-between;
-    border: none;
   }
 }
 .burger hr {
-  border: none;
   height: 7px;
+  border: none;
   background-color: #5C8692;
 }
 .burger:active {
@@ -40,9 +40,9 @@ a {
 }
 
 p {
-  font-size: 1.25vw;
   color: #555555;
   line-height: 30px;
+  font-size: 1.25vw;
   font-family: "Manrope";
 }
 @media (max-width: 600px) {
@@ -57,13 +57,13 @@ p {
 }
 
 .btn-blue-bg {
-  background-color: #5C8692;
   border: none;
+  background-color: #5C8692;
 }
 .btn-blue-bg .btn-link {
   color: #FFFFFF;
-  font-family: "Manrope";
   font-size: 0.9722222222vw;
+  font-family: "Manrope";
   text-transform: uppercase;
 }
 @media (max-width: 600px) {
@@ -76,10 +76,10 @@ p {
 }
 
 .highlights {
-  font-size: 1.0416666667vw;
   color: #5C8692;
-  text-transform: uppercase;
+  font-size: 1.0416666667vw;
   font-family: "Manrope";
+  text-transform: uppercase;
 }
 @media (max-width: 600px) {
   .highlights {
@@ -123,29 +123,29 @@ p {
   }
 }
 .nav__container__block__phone-num a {
-  font-size: 1.1111111111vw;
   color: #141414;
-  font-family: "Manrope";
   position: relative;
+  font-size: 1.1111111111vw;
+  font-family: "Manrope";
 }
 .nav__container__block__phone-num a::after {
+  top: -0.2083333333vw;
   content: "";
   display: block;
   position: absolute;
-  background-image: url(../imgs/phone-icon.svg);
+  width: 1.6666666667vw;
+  left: -2.7777777778vw;
+  height: 1.7361111111vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1.6666666667vw;
-  height: 1.7361111111vw;
-  left: -2.7777777778vw;
-  top: -0.2083333333vw;
+  background-image: url(../imgs/phone-icon.svg);
 }
 .nav__container__block__menu .menu-list {
-  display: flex;
-  justify-content: space-between;
   list-style: none;
   width: 26.3888888889vw;
+  display: flex;
+  justify-content: space-between;
 }
 @media (max-width: 600px) {
   .nav__container__block__menu .menu-list {
@@ -153,9 +153,9 @@ p {
   }
 }
 .nav__container__block__menu .menu-list .item_link {
-  font-family: "Manrope";
-  font-size: 1.1805555556vw;
   color: #141414;
+  font-size: 1.1805555556vw;
+  font-family: "Manrope";
 }
 .nav__container__block__menu .menu-list .item_link:hover {
   text-decoration: underline;
@@ -192,23 +192,23 @@ p {
   }
 }
 .nav__container__block__btn .btn::after {
+  top: 35%;
   content: "";
   display: block;
   position: absolute;
-  background-image: url(../imgs/schedule-icon.svg);
+  left: 2.4305555556vw;
+  width: 1.25vw;
+  height: 1.25vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1.25vw;
-  height: 1.25vw;
-  top: 35%;
-  left: 2.4305555556vw;
+  background-image: url(../imgs/schedule-icon.svg);
 }
 @media (max-width: 600px) {
   .nav__container__block__btn .btn::after {
+    left: 15px;
     width: 10px;
     height: 10px;
-    left: 15px;
   }
 }
 .nav__container .block-left {
@@ -219,26 +219,26 @@ p {
 }
 
 .header-main {
-  background-color: #EBF3F5;
   padding: 8.3333333333vw 0;
+  background-color: #EBF3F5;
 }
 .header-main__wrapper {
-  width: 83.3333333333vw;
   margin: auto;
+  width: 83.3333333333vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 600px) {
   .header-main__wrapper {
-    flex-direction: column;
-    width: auto;
     gap: 40px;
+    width: auto;
+    flex-direction: column;
   }
 }
 .header-main__wrapper__content span {
-  margin-left: 2.0833333333vw;
   position: relative;
+  margin-left: 2.0833333333vw;
 }
 @media (max-width: 600px) {
   .header-main__wrapper__content span {
@@ -246,42 +246,43 @@ p {
   }
 }
 .header-main__wrapper__content span::before {
+  top: -0.1388888889vw;
   content: "";
   display: block;
   position: absolute;
+  width: 1.6666666667vw;
+  height: 1.6666666667vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../imgs/exclamation-point.svg);
-  width: 1.6666666667vw;
-  height: 1.6666666667vw;
-  top: -0.1388888889vw;
 }
 @media (max-width: 600px) {
   .header-main__wrapper__content span::before {
     width: 15px;
+    left: -20px;
     height: 15px;
   }
 }
 .header-main__wrapper__content h1 {
-  font-size: 3.8194444444vw;
   color: #141414;
-  font-family: "Playfair Display";
-  line-height: 5vw;
+  font-size: 3.8194444444vw;
   margin-top: 0.2083333333vw;
+  line-height: 5vw;
   margin-bottom: 1.3194444444vw;
+  font-family: "Playfair Display";
 }
 @media (max-width: 600px) {
   .header-main__wrapper__content h1 {
     font-size: 35px;
-    line-height: 40px;
     margin-top: 5px;
+    line-height: 40px;
     margin-bottom: 10px;
   }
 }
 .header-main__wrapper__content .btn {
-  width: 16.5277777778vw;
   height: 57px;
+  width: 16.5277777778vw;
   margin-top: 1.8055555556vw;
 }
 @media (max-width: 600px) {
@@ -296,32 +297,32 @@ p {
   margin-right: 5vw;
 }
 .header-main__wrapper__img img {
-  width: 38.1944444444vw;
   height: 545px;
+  width: 38.1944444444vw;
 }
 @media (max-width: 600px) {
   .header-main__wrapper__img img {
-    width: 275px;
-    height: 270px;
+    width: 280px;
+    height: 275px;
   }
 }
 .header-main__wrapper::before {
   content: "";
   display: block;
   position: absolute;
+  width: 41.1111111111vw;
+  right: 6.9444444444vw;
+  height: 44.7916666667vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../imgs/Rectangle.svg);
-  width: 41.1111111111vw;
-  height: 44.7916666667vw;
-  right: 6.9444444444vw;
 }
 @media (max-width: 600px) {
   .header-main__wrapper::before {
-    width: 280px;
-    height: 300px;
-    top: 380px;
+    top: 390px;
     left: 85px;
+    width: 270px;
+    height: 290px;
   }
 }/*# sourceMappingURL=style.css.map */
