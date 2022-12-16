@@ -10,11 +10,14 @@ html, body {
   background-color: #FFFFFF;
 }
 
-.burger {
+.burger-menu {
+  width: 11.8055555556vw;
+}
+.burger-menu .burger {
   display: none;
 }
 @media (max-width: 600px) {
-  .burger {
+  .burger-menu .burger {
     top: 10px;
     left: 10px;
     width: 35px;
@@ -26,13 +29,46 @@ html, body {
     justify-content: space-between;
   }
 }
-.burger hr {
+.burger-menu .burger hr {
   height: 7px;
   border: none;
   background-color: #5C8692;
 }
-.burger:active {
+.burger-menu .burger:active {
   box-shadow: 0 0 5px 1px gray;
+}
+.burger-menu .list {
+  display: none;
+}
+@media (max-width: 600px) {
+  .burger-menu .list {
+    height: 0;
+    border: 0;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+}
+.burger-menu .active + .list {
+  display: none;
+}
+@media (max-width: 600px) {
+  .burger-menu .active + .list {
+    width: 150px;
+    height: 130px;
+    color: #141414;
+    font-size: 12px;
+    margin-top: 60px;
+    margin-left: 20px;
+    font-family: "Manrope";
+  }
+  .burger-menu .active + .list p:hover {
+    text-decoration: underline;
+  }
+  .burger-menu .active + .list p:active {
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #5C8692;
+  }
 }
 
 a {
@@ -294,6 +330,11 @@ p {
     flex-direction: column;
   }
 }
+@media (max-width: 600px) {
+  .header-main__wrapper__content {
+    text-align: center;
+  }
+}
 .header-main__wrapper__content span {
   position: relative;
   margin-left: 2.0833333333vw;
@@ -550,4 +591,40 @@ p {
     width: 267px;
     height: 305px;
   }
+}
+
+.services {
+  margin: 6.9444444444vw 8.3333333333vw 8.3333333333vw 8.3333333333vw;
+  text-align: center;
+}
+.services__title {
+  margin-bottom: 4.8611111111vw;
+}
+.services__title h2 {
+  margin-top: 1.3888888889vw;
+}
+.services__container {
+  display: flex;
+  justify-content: space-between;
+  width: 83.3333333333vw;
+}
+.services__container__img {
+  height: 45.1388888889vw;
+}
+.services__container__img img {
+  width: 41.6666666667vw;
+  height: 45.1388888889vw;
+}
+.services__container .price-block-right {
+  padding: 4.1666666667vw 0 9.2361111111vw 4.1666666667vw;
+}
+.services__container .price-block-left {
+  padding: 4.1666666667vw 4.1666666667vw 9.2361111111vw 0;
+}
+.services__container__prices__box {
+  width: 37.5vw;
+}
+.services__container__prices__box .title {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

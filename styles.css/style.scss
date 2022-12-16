@@ -21,26 +21,58 @@ html, body{
     background-color: $c-white;
 }
 
-.burger{
-    display: none;
-    @include media(phone-only){
-        top: 10px;
-        left: 10px;
-        width: 35px;
-        height: 35px;
-        border: none;
-        display: flex;
-        position: fixed;
-        flex-direction: column;
-        justify-content: space-between;
+.burger-menu{
+    width: toVw(170px);
+    .burger{
+        display: none;
+        @include media(phone-only){
+            top: 10px;
+            left: 10px;
+            width: 35px;
+            height: 35px;
+            border: none;
+            display: flex;
+            position: fixed;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        hr{
+            height: 7px;
+            border: none;
+            background-color: $c-bell-blue;
+        }
+        &:active{
+            box-shadow: 0 0 5px 1px gray;
+        }
     }
-    hr{
-        height: 7px;
-        border: none;
-        background-color: $c-bell-blue;
+    .list{
+        display: none;
+        @include media(phone-only){
+            height: 0;
+            border: 0;
+            transition: .3s;
+            overflow: hidden;
+        }
     }
-    &:active{
-        box-shadow: 0 0 5px 1px gray;
+    .active + .list{
+        display: none;
+        @include media(phone-only){
+            width: 150px;
+            height: 130px;
+            color: $c-dark;
+            font-size: 12px;
+            margin-top: 60px;
+            margin-left: 20px;
+            font-family: "Manrope";
+            p:hover{
+                text-decoration: underline;
+            }
+            p:active{
+                color: $c-white;
+                text-decoration: none;
+                background-color: $c-bell-blue;
+            }
+        }
     }
 }
 
@@ -262,6 +294,9 @@ p{
             flex-direction: column;
         }
         &__content{
+            @include media(phone-only){
+                text-align: center;
+            }
             span{
                 position: relative;
                 margin-left: toVw(30px);
@@ -471,6 +506,40 @@ p{
                     width: 267px;
                     height: 305px;
                 }
+            }
+        }
+    }
+}
+
+.services{
+    margin: toVw(100px) toVw(120px) toVw(120px) toVw(120px);
+    text-align: center;
+    &__title{
+        margin-bottom: toVw(70px);
+        h2{
+            margin-top: toVw(20px)
+        }
+    }
+    &__container{
+        @include flex-between();
+        width: toVw(1200px);
+        &__img{
+            height: toVw(650px);
+            img{
+                width: toVw(600px);
+                height: toVw(650px);
+            }
+        }
+        .price-block-right{
+            padding: toVw(60px) 0 toVw(133px) toVw(60px);
+        }
+        .price-block-left{
+            padding: toVw(60px) toVw(60px) toVw(133px) 0;
+        }
+        &__prices__box{
+            width: toVw(540px);
+            .title{
+                @include flex-between();
             }
         }
     }
