@@ -93,8 +93,8 @@ h2{
     line-height: toVw(58px);
     font-family: 'Playfair Display';
     @include media(phone-only){
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 25px;
+        line-height: 35px;
     }
     br{
         @include media(phone-only){
@@ -656,8 +656,16 @@ p{
 .reviews{
     background-color: $c-light-blue;
     padding: toVw(100px) toVw(120px) toVw(130px) toVw(120px);
+    @include media(phone-only){
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
     &__wrapper{
         width: toVw(1200px);
+        @include media(phone-only){
+            width: 300px;
+            margin: auto;
+        }
         &__title{
             text-align: center;
             .highlights{
@@ -670,7 +678,7 @@ p{
             margin-top: toVw(40px);
             @include flex-between();
             @include media(phone-only){
-                gap: 20px;
+                gap: 30px;
                 margin-top: 20px;
                 align-items: center;
                 flex-direction: column;
