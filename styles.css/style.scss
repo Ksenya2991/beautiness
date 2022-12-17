@@ -22,10 +22,11 @@ html, body{
 }
 
 .burger-menu{
-    width: toVw(170px);
-    .burger{
-        display: none;
-        @include media(phone-only){
+    position: relative;
+    visibility: hidden;
+    @include media(phone-only){
+        visibility: visible;
+        .burger{
             top: 10px;
             left: 10px;
             width: 35px;
@@ -33,45 +34,51 @@ html, body{
             border: none;
             display: flex;
             position: fixed;
+            z-index: 2;
             flex-direction: column;
             justify-content: space-between;
+            hr{
+                height: 7px;
+                border: none;
+                background-color: $c-bell-blue;
+            }
+            &:active{
+                box-shadow: 0 0 5px 1px gray;
+            }
         }
-        hr{
-            height: 7px;
-            border: none;
-            background-color: $c-bell-blue;
-        }
-        &:active{
-            box-shadow: 0 0 5px 1px gray;
-        }
-    }
-    .list{
-        display: none;
-        @include media(phone-only){
-            height: 0;
+        .list{
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 190px;
             border: 0;
             transition: .3s;
             overflow: hidden;
+            background-color: $c-white;
+            padding-top: 70px;
+            transform: translateX(-100%);
+            li{
+                padding-left: 20px;
+                list-style: none;
+                margin-bottom: 8px;
+                &:active{
+                    text-decoration: none;
+                    background-color: $c-bell-blue;
+                }
+                a{
+                    color: $c-dark;
+                    font-size: 12px;
+                    font-family: "Manrope";
+                    &:active{
+                        color: $c-white;
+                    }
+                }
+            }
         }
-    }
-    .active + .list{
-        display: none;
-        @include media(phone-only){
-            width: 150px;
-            height: 130px;
-            color: $c-dark;
-            font-size: 12px;
-            margin-top: 60px;
-            margin-left: 20px;
-            font-family: "Manrope";
-            p:hover{
-                text-decoration: underline;
-            }
-            p:active{
-                color: $c-white;
-                text-decoration: none;
-                background-color: $c-bell-blue;
-            }
+        .list.active{
+            transform: translateX(0);
         }
     }
 }

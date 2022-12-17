@@ -11,12 +11,13 @@ html, body {
 }
 
 .burger-menu {
-  width: 11.8055555556vw;
-}
-.burger-menu .burger {
-  display: none;
+  position: relative;
+  visibility: hidden;
 }
 @media (max-width: 600px) {
+  .burger-menu {
+    visibility: visible;
+  }
   .burger-menu .burger {
     top: 10px;
     left: 10px;
@@ -25,49 +26,51 @@ html, body {
     border: none;
     display: flex;
     position: fixed;
+    z-index: 2;
     flex-direction: column;
     justify-content: space-between;
   }
-}
-.burger-menu .burger hr {
-  height: 7px;
-  border: none;
-  background-color: #5C8692;
-}
-.burger-menu .burger:active {
-  box-shadow: 0 0 5px 1px gray;
-}
-.burger-menu .list {
-  display: none;
-}
-@media (max-width: 600px) {
+  .burger-menu .burger hr {
+    height: 7px;
+    border: none;
+    background-color: #5C8692;
+  }
+  .burger-menu .burger:active {
+    box-shadow: 0 0 5px 1px gray;
+  }
   .burger-menu .list {
-    height: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 190px;
     border: 0;
     transition: 0.3s;
     overflow: hidden;
+    background-color: #FFFFFF;
+    padding-top: 70px;
+    transform: translateX(-100%);
   }
-}
-.burger-menu .active + .list {
-  display: none;
-}
-@media (max-width: 600px) {
-  .burger-menu .active + .list {
-    width: 150px;
-    height: 130px;
-    color: #141414;
-    font-size: 12px;
-    margin-top: 60px;
-    margin-left: 20px;
-    font-family: "Manrope";
+  .burger-menu .list li {
+    padding-left: 20px;
+    list-style: none;
+    margin-bottom: 8px;
   }
-  .burger-menu .active + .list p:hover {
-    text-decoration: underline;
-  }
-  .burger-menu .active + .list p:active {
-    color: #FFFFFF;
+  .burger-menu .list li:active {
     text-decoration: none;
     background-color: #5C8692;
+  }
+  .burger-menu .list li a {
+    color: #141414;
+    font-size: 12px;
+    font-family: "Manrope";
+  }
+  .burger-menu .list li a:active {
+    color: #FFFFFF;
+  }
+  .burger-menu .list.active {
+    transform: translateX(0);
   }
 }
 
