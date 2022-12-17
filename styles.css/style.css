@@ -43,8 +43,8 @@ html, body {
     z-index: 1;
     top: 0;
     left: 0;
-    width: 150px;
-    height: 190px;
+    width: 50%;
+    height: 220px;
     border: 0;
     transition: 0.3s;
     overflow: hidden;
@@ -63,7 +63,7 @@ html, body {
   }
   .burger-menu .list li a {
     color: #141414;
-    font-size: 12px;
+    font-size: 18px;
     font-family: "Manrope";
   }
   .burger-menu .list li a:active {
