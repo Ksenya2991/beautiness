@@ -1,0 +1,135 @@
+.services{
+    margin: toVw(100px) toVw(120px) toVw(120px) toVw(120px);
+    @include media(phone-only){
+        margin: auto;
+        width: 300px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    &__title{
+        text-align: center;
+        margin-bottom: toVw(70px);
+        h2{
+            margin-top: toVw(20px);
+        }
+    }
+    &__container{
+        width: toVw(1200px);
+        height: toVw(650px);
+        @include flex-between();
+        @include media(phone-only){
+            width: 300px;
+            height: auto;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__img{
+            height: toVw(650px);
+            @include media(phone-only){
+                height: auto;
+            }
+            img{
+                width: toVw(600px);
+                height: toVw(650px);
+                @include media(phone-only){
+                    width: 220px;
+                    height: 250px;
+                }
+            }
+            .adaptive-none{
+                @include media(phone-only){
+                    display: none;
+                }
+            }
+        }
+        .price-block-right{
+            position: relative;
+            padding: toVw(26px) 0 toVw(133px) toVw(60px);
+            @include media(phone-only){
+                padding: 0;
+                margin-top: 30px;
+                .btn{
+                    display: none;
+                }
+            }
+            &::after{
+                left: 0;
+                bottom: 0;
+                @include after();
+                width: toVw(90px);
+                height: toVw(90px);
+                position: absolute;
+                @include bg-default();
+                background-image: url(../imgs/square.jpg);
+                @include media(phone-only){
+                    display: none;
+                }
+            }
+        }
+        .price-block-left{
+            position: relative;
+            padding: toVw(133px) toVw(60px) toVw(26px) 0;
+            @include media(phone-only){
+                padding: 0;
+            }
+            &::after{
+                top: 0;
+                right: 0;
+                @include after();
+                width: toVw(90px);
+                height: toVw(90px);
+                position: absolute;
+                @include bg-default();
+                background-image: url(../imgs/square.jpg);
+                @include media(phone-only){
+                    display: none;
+                }
+            }
+        }
+        &__prices__box{
+            width: toVw(540px);
+            @include media(phone-only){
+                width: 100%;
+                text-align: center;
+            }
+            .title{
+                @include align-items-center();
+            }
+            .plus-border{
+                padding-top: toVw(7px);
+                margin-bottom: toVw(12px);
+                padding-bottom: toVw(15px);
+                border-top: toVw(3px) solid $c-dark;
+                border-bottom: toVw(1px) solid #134134;
+                @include media(phone-only){
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    margin-bottom: 12px;
+                    border-top: 2px solid $c-dark;
+                    border-bottom: 1px solid #134134;
+                    text-align: start;
+                }
+            }
+            .price{
+                color: $c-dark;
+                font-size: toVw(21px);
+                margin-left: toVw(10px);
+                font-family: 'Playfair Display';
+                @include media(phone-only){
+                    font-size: 18px;
+                    margin-left: 5px;
+                }
+            }
+            .btn{
+                width: toVw(248px);
+                height: toVw(57px);
+                margin-top: toVw(10px);
+                @include media(phone-only){
+                    width: 140px;
+                    height: 35px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

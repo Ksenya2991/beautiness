@@ -1,0 +1,81 @@
+.about{
+    background-color:  $c-light-blue;
+    padding: toVw(140px) toVw(120px) toVw(120px) toVw(120px);
+    &__wrapper{
+        width: toVw(1200px);
+        @include flex-between();
+        @include media(phone-only){
+            gap: 30px;
+            width: auto;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__content{
+            width: toVw(595px);
+            @include media(phone-only){
+                width: 300px;
+                text-align: center;
+            }
+            h2{
+                margin-top: toVw(4px);
+                margin-bottom: toVw(14px);
+                @include media(phone-only){
+                    margin-top: 10px;
+                    margin-bottom: 14px;
+                }
+            }
+            .advantages{
+                margin-top: toVw(50px);
+                @include flex-between();
+                @include media(phone-only){
+                    margin-top: 20px;
+                }
+                &__box{
+                    width: toVw(186px);
+                    text-align: center;
+                    height: toVw(182px);
+                    background-color: $c-white;
+                    border: toVw(2px) solid #1E2C30;
+                    @include media(phone-only){
+                        width: 90px;
+                        height: 90px;
+                        border: 1px solid #1E2C30;
+                    }
+                    &_icon{
+                        margin-top: toVw(20px);
+                        @include media(phone-only){
+                            margin-top: 8px;
+                        }
+                        img{
+                            width: toVw(73px);
+                            height: toVw(74px);
+                            @include media(phone-only){
+                                width: 35px;
+                                height: 36px;
+                            }
+                        }
+                    }
+                    &_text{
+                        color: $c-dark;
+                        font-size: toVw(22px);
+                        margin-top: toVw(5px);
+                        font-family: 'Playfair Display';
+                        @include media(phone-only){
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        &__photo{
+            img{
+                width: toVw(535px);
+                height: toVw(611px);
+                @include media(phone-only){
+                    width: 267px;
+                    height: 305px;
+                }
+            }
+        }
+    }
+}
