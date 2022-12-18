@@ -25,7 +25,7 @@ html, body {
     height: 35px;
     border: none;
     display: flex;
-    position: fixed;
+    position: absolute;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -738,6 +738,7 @@ p {
     margin-bottom: 12px;
     border-top: 2px solid #141414;
     border-bottom: 1px solid #134134;
+    text-align: start;
   }
 }
 .services__container__prices__box .price {
@@ -906,5 +907,107 @@ p {
 @media (max-width: 600px) {
   .reviews__wrapper__content__box .customer-info__wrapper__details .country {
     font-size: 10px;
+  }
+}
+
+.benefits {
+  margin: auto;
+  width: 83.3333333333vw;
+  margin-top: 6.9444444444vw;
+  margin-bottom: 7.6388888889vw;
+}
+@media (max-width: 600px) {
+  .benefits {
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+.benefits__title {
+  width: 100%;
+  text-align: center;
+}
+.benefits__title h2 {
+  margin-top: 1.3888888889vw;
+}
+.benefits__grids {
+  width: 100%;
+  display: grid;
+  gap: 3.4722222222vw;
+  margin-top: 4.8611111111vw;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 600px) {
+  .benefits__grids {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 600px) {
+  .benefits__grids__box {
+    width: 140px;
+  }
+}
+.benefits__grids__box .check-box {
+  width: 6.5277777778vw;
+  height: 6.5277777778vw;
+  border: 0.1388888889vw solid #5C8692;
+}
+@media (max-width: 600px) {
+  .benefits__grids__box .check-box {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #5C8692;
+  }
+}
+.benefits__grids__box .check-box__inside {
+  width: 5.8333333333vw;
+  height: 5.8333333333vw;
+  position: relative;
+  box-sizing: content-box;
+  background-color: #5C8692;
+  border: 0.2083333333vw solid #FFFFFF;
+}
+@media (max-width: 600px) {
+  .benefits__grids__box .check-box__inside {
+    width: 34px;
+    height: 34px;
+    border: 3px solid #FFFFFF;
+  }
+}
+.benefits__grids__box .check-box__inside::after {
+  top: 2.0833333333vw;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 1.8055555556vw;
+  width: 2.2222222222vw;
+  height: 1.5972222222vw;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../imgs/check-mark.svg);
+}
+@media (max-width: 600px) {
+  .benefits__grids__box .check-box__inside::after {
+    width: 22px;
+    height: 13px;
+  }
+}
+.benefits__grids__box h3 {
+  margin-top: 0.9722222222vw;
+  margin-bottom: 0.7638888889vw;
+}
+@media (max-width: 600px) {
+  .benefits__grids__box h3 {
+    font-size: 11px;
+    margin-top: 10px;
+    line-height: 20px;
+    margin-bottom: 5px;
   }
 }/*# sourceMappingURL=style.css.map */

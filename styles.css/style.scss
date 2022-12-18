@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // border: 1px solid white;
+    // border: 1px solid black;
 }
 
 html, body{
@@ -34,7 +34,7 @@ html, body{
             height: 35px;
             border: none;
             display: flex;
-            position: fixed;
+            position: absolute;
             flex-direction: column;
             justify-content: space-between;
             hr{
@@ -610,7 +610,7 @@ p{
             width: toVw(540px);
             @include media(phone-only){
                 width: 100%;
-                text-align: center
+                text-align: center;
             }
             .title{
                 @include align-items-center();
@@ -627,6 +627,7 @@ p{
                     margin-bottom: 12px;
                     border-top: 2px solid $c-dark;
                     border-bottom: 1px solid #134134;
+                    text-align: start;
                 }
             }
             .price{
@@ -766,6 +767,92 @@ p{
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+.benefits{
+    margin: auto;
+    width: toVw(1200px);
+    margin-top: toVw(100px);
+    margin-bottom: toVw(110px);
+    @include media(phone-only){
+        width: 300px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    &__title{
+        width: 100%;
+        text-align: center;
+        h2{
+            margin-top: toVw(20px);
+        }
+    }
+    &__grids{
+        width: 100%;
+        display: grid;
+        gap: toVw(50px);
+        margin-top: toVw(70px);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        @include media(phone-only){
+            gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            justify-content: space-between;
+        }
+        &__box{
+            @include media(phone-only){
+                width: 140px;
+            }
+            .check-box{
+                width: toVw(94px);
+                height: toVw(94px);
+                border: toVw(2px) solid $c-bell-blue;
+                @include media(phone-only){
+                    width: 44px;
+                    height: 44px;
+                    border: 2px solid $c-bell-blue;
+                }
+                &__inside{
+                    width: toVw(84px);
+                    height: toVw(84px);
+                    position: relative;
+                    box-sizing: content-box;
+                    background-color: $c-bell-blue;
+                    border: toVw(3px) solid $c-white;
+                    @include media(phone-only){
+                        width: 34px;
+                        height: 34px;
+                        border: 3px solid $c-white;
+                    }
+                    &::after{
+                        top: toVw(30px);
+                        @include after();
+                        left: toVw(26px);
+                        width: toVw(32px);
+                        height: toVw(23px);
+                        position: absolute;
+                        @include bg-default();
+                        background-image: url(../imgs/check-mark.svg);
+                        @include media(phone-only){
+                            width: 22px;
+                            height: 13px;
+                        }
+                    }
+                }
+            }
+            h3{
+                margin-top: toVw(14px);
+                margin-bottom: toVw(11px);
+                @include media(phone-only){
+                    font-size: 11px;
+                    margin-top: 10px;
+                    line-height: 20px;
+                    margin-bottom: 5px;
                 }
             }
         }
