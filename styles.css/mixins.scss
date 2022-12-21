@@ -31,3 +31,20 @@
         @media (min-width: 1800px) { @content; }
     }
 }
+
+@mixin section-title{
+    margin: auto;
+    width: toVw(1200px);
+    text-align: center;
+    margin-bottom: toVw(67px);
+    @include media(phone-only){
+        width: 300px;
+        margin-bottom: 20px;
+        }
+    .highlights{
+        margin-bottom: toVw(24px);
+        @include media(phone-only){
+            margin-bottom: 15px;
+        }
+    }
+}

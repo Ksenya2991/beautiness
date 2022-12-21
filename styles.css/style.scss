@@ -70,7 +70,7 @@ html, body{
                 a{
                     color: $c-dark;
                     font-size: 18px;
-                    font-family: "Manrope";
+                    font-family: "Manrope", sans-serif;
                     &:active{
                         color: $c-white;
                     }
@@ -91,7 +91,7 @@ h2{
     color: $c-dark;
     font-size: toVw(45px);
     line-height: toVw(58px);
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', sans-serif;
     @include media(phone-only){
         font-size: 25px;
         line-height: 35px;
@@ -105,9 +105,9 @@ h2{
 
 h3{
     color: $c-dark;
-    font-size: toVw(26px);
+    font-size: toVw(22px);
     line-height: toVw(36px);
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', sans-serif;
     @include media(phone-only){
         font-size: 20px;
         line-height: 30px;
@@ -118,7 +118,7 @@ p{
     color: $c-brown;
     line-height: 30px;
     font-size: toVw(18px);
-    font-family: 'Manrope';
+    font-family: 'Manrope', sans-serif;
     @include media(phone-only){
         font-size: 12px;
         line-height: 20px;
@@ -132,47 +132,55 @@ p{
 .btn-blue-bg{
     border: none;
     background-color: $c-bell-blue;
+    cursor: pointer;
     .btn-link{
         color: $c-white;
         font-size: toVw(14px);
-        font-family: 'Manrope';
+        font-family: 'Manrope', sans-serif;
         text-transform: uppercase;
         @include media(phone-only){
             font-size: 10px;
         }
     }
+    &:hover{
+        background-color: #50757f;
+    }
     &:active{
-        background-color: #74a8b7;
+        background-color: #46666e;
     }
 }
 
 .btn-clear-bg{
     background-color: transparent;
     border: toVw(2px) solid $c-bell-blue;
+    cursor: pointer;
     @include media(phone-only){
         border: 1px solid $c-bell-blue;
     }
     a{
         color: $c-dark;
         font-size: toVw(13px);
-        font-family: 'Manrope';
+        font-family: 'Manrope', sans-serif;
         text-transform: uppercase;
-        &:active{
-            color: $c-white;
-        }
         @include media(phone-only){
             font-size: 10px;
         }
     }
+    &:hover{
+        background-color: $c-light-blue;
+    }
     &:active{
         background-color: $c-bell-blue;
+        a{
+            color: $c-white;
+        }
     }
 }
 
 .highlights{
     color: $c-bell-blue;
     font-size: toVw(15px);
-    font-family: 'Manrope';
+    font-family: 'Manrope', sans-serif;
     text-transform: uppercase;
     @include media(phone-only){
         font-size: 10px;
@@ -185,8 +193,9 @@ p{
     @include media(phone-only){
         padding: 15px 15px;
     }
-    &__block{
+    &__left{
         @include align-items-center();
+        width: toVw(468px);
         &__logo{
             @include media(phone-only){
                 margin-left: 45px;
@@ -208,7 +217,7 @@ p{
                 color: $c-dark;
                 position: relative;
                 font-size: toVw(16px);
-                font-family: 'Manrope';
+                font-family: 'Manrope', sans-serif;
                 &::after{
                     top: toVw(-3px);
                     @include after();
@@ -220,6 +229,10 @@ p{
                 }
             }
         }
+    }
+    &__right{
+        width: toVw(727px);
+        @include align-items-center();
         &__menu{
             .menu-list{
                 list-style: none;
@@ -231,14 +244,14 @@ p{
                 .item_link{
                     color: $c-dark;
                     font-size: toVw(17px);
-                    font-family: 'Manrope';
+                    font-family: 'Manrope', sans-serif;
                     &:hover{
-                        text-decoration: underline;
+                        border-bottom: toVw(2px) solid $c-bell-blue;
                     }
                 }
             }
         }
-
+    
         &__socials{
             width: toVw(84px);
             height: toVw(19px);
@@ -246,7 +259,11 @@ p{
             @include media(phone-only){
                 display: none;
             }
+            &__box:hover{
+                scale: 1.1;
+            }
         }
+
         &__btn{
             .btn{
                 width: toVw(201px);
@@ -278,13 +295,6 @@ p{
                 }
             }
         }
-    }
-    .block-left{
-        width: toVw(468px);
-    }
-
-    .block-right{
-        width: toVw(727px);
     }
 }
 
@@ -330,7 +340,7 @@ p{
                 margin-top: toVw(3px);
                 line-height: toVw(72px);
                 margin-bottom: toVw(19px);
-                font-family: 'Playfair Display';
+                font-family: 'Playfair Display', sans-serif;
                 -webkit-animation: scale-in-hor-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 animation: scale-in-hor-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                 @-webkit-keyframes scale-in-hor-left {
@@ -537,8 +547,10 @@ p{
             }
             h3{
                 margin-bottom: toVw(13px);
+                font-size: toVw(26px);
                 @include media(phone-only){
                     margin-bottom: 8px;
+                    font-size: 20px;
                 }
             }
         }
@@ -616,7 +628,7 @@ p{
                         color: $c-dark;
                         font-size: toVw(22px);
                         margin-top: toVw(5px);
-                        font-family: 'Playfair Display';
+                        font-family: 'Playfair Display', sans-serif;
                         @include media(phone-only){
                             font-size: 12px;
                         }
@@ -646,11 +658,7 @@ p{
         margin-bottom: 30px;
     }
     &__title{
-        text-align: center;
-        margin-bottom: toVw(70px);
-        h2{
-            margin-top: toVw(20px);
-        }
+        @include section-title();
     }
     &__container{
         width: toVw(1200px);
@@ -753,7 +761,7 @@ p{
                 color: $c-dark;
                 font-size: toVw(21px);
                 margin-left: toVw(10px);
-                font-family: 'Playfair Display';
+                font-family: 'Playfair Display', sans-serif;
                 @include media(phone-only){
                     font-size: 18px;
                     margin-left: 5px;
@@ -782,20 +790,8 @@ p{
         padding-bottom: 30px;
     }
     &__title{
-        margin: auto;
-        width: toVw(1200px);
-        text-align: center;
+        @include section-title();
         margin-bottom: toVw(40px);
-        @include media(phone-only){
-            width: 300px;
-            margin-bottom: 20px;
-        }
-        .highlights{
-            margin-bottom: toVw(24px);
-            @include media(phone-only){
-                margin-bottom: 15px;
-            }
-        }
     }
     &__wrapper{
         width: toVw(1200px);
@@ -828,7 +824,7 @@ p{
                     p{
                         color: $c-dark;
                         font-size: toVw(19px);
-                        font-family: 'Manrope';
+                        font-family: 'Manrope', sans-serif;
                         line-height: toVw(32px);
                         @include media(phone-only){
                             font-size: 12px;
@@ -880,7 +876,7 @@ p{
                                 font-size: toVw(20px);
                                 margin-top: toVw(3px);
                                 margin-bottom: toVw(7px);
-                                font-family: 'Playfair Display';
+                                font-family: 'Playfair Display', sans-serif;
                                 @include media(phone-only){
                                     margin-top: 0;
                                     font-size: 16px;
@@ -890,7 +886,7 @@ p{
                             .country{
                                 color: $c-white;
                                 font-size: toVw(14px);
-                                font-family: 'Manrope';
+                                font-family: 'Manrope', sans-serif;
                                 @include media(phone-only){
                                     font-size: 10px;
                                 }
@@ -935,11 +931,7 @@ p{
         margin-bottom: 40px;
     }
     &__title{
-        width: 100%;
-        text-align: center;
-        h2{
-            margin-top: toVw(20px);
-        }
+        @include section-title();
     }
     &__grids{
         width: 100%;
@@ -999,13 +991,16 @@ p{
             .box-title{
                 margin-top: toVw(14px);
                 margin-bottom: toVw(11px);
-                @include media(phone-only){
-                    margin-top: 10px;
-                    margin-bottom: 5px;
-                    h3{
+                h3{
+                    font-size: toVw(26px);
+                    @include media(phone-only){
                         font-size: 16px;
                         line-height: 20px;
                     }
+                }
+                @include media(phone-only){
+                    margin-top: 10px;
+                    margin-bottom: 5px;
                 }
             }
         }
@@ -1064,7 +1059,7 @@ p{
                     .contact-details{
                         position: relative;
                         font-size: toVw(15px);
-                        font-family: 'Manrope';
+                        font-family: 'Manrope', sans-serif;
                         line-height: toVw(22px);
                         margin-bottom: toVw(15px);
                         @include media(phone-only){
@@ -1102,7 +1097,7 @@ p{
                     .get-flat{
                         color: $c-white;
                         font-size: toVw(15px);
-                        font-family: 'Manrope';
+                        font-family: 'Manrope', sans-serif;
                         text-transform: uppercase;
                         @include media(phone-only){
                             font-size: 12px;
@@ -1111,7 +1106,7 @@ p{
                     .percent{
                         color: $c-white;
                         font-size: toVw(65px);
-                        font-family: 'Manrope';
+                        font-family: 'Manrope', sans-serif;
                         @include media(phone-only){
                             font-size: 30px;
                         }
@@ -1119,7 +1114,7 @@ p{
                     .discount{
                         color: $c-white;
                         font-size: toVw(18px);
-                        font-family: 'Manrope';
+                        font-family: 'Manrope', sans-serif;
                         @include media(phone-only){
                             font-size: 15px;
                         }
@@ -1146,7 +1141,7 @@ p{
                     width: 100%;
                     height: toVw(65px);
                     color: $c-brown;
-                    font-family: 'Manrope';
+                    font-family: 'Manrope', sans-serif;
                     padding-left: toVw(50px);
                     margin-bottom: toVw(20px);
                     border: toVw(2px) solid $c-bell-blue;
@@ -1229,4 +1224,237 @@ p{
         }
     }
 }
+
+.updates{
+    &__title{
+        @include section-title();
+        margin-top: toVw(102px);
+        @include media(phone-only){
+            margin-top: 30px;
+        }
+    }
+    &__wrapper{
+        @include flex-between();
+        width: toVw(1200px);
+        gap: toVw(20px);
+        margin: auto;
+        @include media(phone-only){
+            flex-direction: column;
+            width: 300px;
+            gap: 20px;
+        }
+        &__box{
+            width: toVw(387px);
+            @include media(phone-only){
+                width: 100%;
+            }
+            &__img{
+                width: 100%;
+                height: toVw(342px);
+                @include media(phone-only){
+                    height: 250px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &__content{
+                background-color: $c-light-blue;
+                padding: toVw(29px) toVw(26px) toVw(34px) toVw(26px);
+                @include media(phone-only){
+                    padding: 15px 20px 18px 20px;
+                }
+                &__details{
+                    @include align-items-center();
+                    .highlights{
+                        font-size: toVw(13px);
+                        @include media(phone-only){
+                            font-size: 10px;
+                        }
+                    }
+                    .block{
+                        display: block;
+                        background-color: $c-dark;
+                        width: toVw(30px);
+                        height: toVw(4px);
+                        border: none;
+                        @include media(phone-only){
+                            width: 15px;
+                            height: 2px;
+                        }
+                    }
+                }
+                &__title{
+                    margin-top: toVw(10px);
+                    margin-bottom: toVw(14px);
+                    h3{
+                        font-size: toVw(22px);
+                        @include media(phone-only){
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__btn{
+        display: flex;
+        justify-content: center;
+        margin-bottom: toVw(110px);
+        @include media(phone-only){
+            margin-bottom: 30px;
+        }
+        .btn{
+            margin-top: toVw(12px);
+            width: toVw(230px);
+            height: toVw(57px);
+            @include media(phone-only){
+                margin-top: 12px;
+                width: 130px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+.footer{
+    background-color: #1E2C30;
+    width: 100%;
+    padding-top: toVw(70px);
+    @include media(phone-only){
+        padding-top: 30px;
+    }
+    &__top{
+        width: toVw(1200px);
+        @include align-items-center();
+        margin: auto;
+        padding-bottom: toVw(40px);
+        border-bottom: toVw(1px) solid rgba(255, 255, 255, 0.15);
+        @include media(phone-only){
+            width: 300px;
+            flex-direction: column;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        &__logo{
+            width: toVw(298px);
+            @include media(phone-only){
+                width: 150px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        &__socials{
+            width: toVw(250px);
+            @include flex-between();
+            @include media(phone-only){
+                width: 130px;
+            }
+            &__box{
+                img{
+                    width: toVw(55px);
+                    height: toVw(55px);
+                    border: toVw(2px) solid $c-bell-blue;
+                    padding: toVw(17px) toVw(17px);
+                    &:hover{
+                        background-color: #344c53;
+                    }
+                    @include media(phone-only){
+                        width: 20px;
+                        height: 20px;
+                        border: 2px slid $c-bell-blue;
+                        padding: 5px 5px;
+                    }
+                }
+            }
+        }
+    }
+    &__main{
+        @include flex-between();
+        width: toVw(1200px);
+        margin: auto;
+        margin-top: toVw(41px);
+        margin-bottom: toVw(50px);
+        @include media(phone-only){
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 300px;
+            flex-wrap: wrap;
+            gap: 15px;
+            .block-relocation{
+                order: 1;
+            }
+        }
+        &__block{
+            a{
+                font-family: 'Manrope', sans-serif;
+                color: $c-white;
+                font-size: toVw(16px);
+                line-height: toVw(29px);
+                &:hover{
+                    border-bottom: toVw(1px) solid $c-white;
+                }
+                @include media(phone-only){
+                    font-size: 10px;
+                    line-height: 18px;
+                }
+            }
+            h3{
+                color: $c-white;
+                margin-bottom: toVw(14px);
+                @include media(phone-only){
+                    font-size: 12px;
+                }
+            }
+            ul{
+                list-style: none;
+                li{
+                    font-family: 'Manrope', sans-serif;
+                    color: $c-white;
+                    font-size: toVw(16px);
+                    line-height: toVw(29px);
+                    @include media(phone-only){
+                        font-size: 10px;
+                        line-height: 18px;
+                    }
+                }
+            }
+            &__contacts{
+                display: flex;
+                gap: toVw(20px);
+                font-family: 'Manrope', sans-serif;
+                color: $c-white;
+                font-size: toVw(16px);
+                line-height: toVw(29px);
+                @include media(phone-only){
+                    font-size: 12px;
+                    line-height: 20px;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+    &__bottom{
+        width: 100%;
+        background-color: #111E22;
+        padding-top: toVw(19px);
+        padding-bottom: toVw(20px);
+        @include media(phone-only){
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        &__text{
+            font-family: 'Manrope', sans-serif;
+            font-size: toVw(15px);
+            color: $c-white;
+            text-align: center;
+            @include media(phone-only){
+                font-size: 8px;
+            }
+        }
+    }
+}
+
 
