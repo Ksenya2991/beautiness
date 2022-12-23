@@ -38,6 +38,7 @@ html, body{
     a{
         color: $c-white;
         font-size: toVw(30px);
+        font-family: "Manrope", sans-serif;
     }
     &:hover{
         background-color: $c-bell-blue;
@@ -125,7 +126,9 @@ h2{
     @include media(phone-only){
         font-size: 25px;
         line-height: 35px;
-        br{
+    }
+    br{
+        @include media(phone-only){
             display: none;
         }
     }
@@ -178,11 +181,17 @@ p{
     background-color: transparent;
     border: toVw(2px) solid $c-bell-blue;
     cursor: pointer;
+    @include media(phone-only){
+        border: 1px solid $c-bell-blue;
+    }
     a{
         color: $c-dark;
         font-size: toVw(13px);
         font-family: 'Manrope', sans-serif;
         text-transform: uppercase;
+        @include media(phone-only){
+            font-size: 10px;
+        }
     }
     &:hover{
         background-color: $c-light-blue;
@@ -193,9 +202,6 @@ p{
             color: $c-white;
         }
     }
-    @include media(phone-only){
-        border: 1px solid $c-bell-blue;
-    }
 }
 
 .highlights{
@@ -205,9 +211,6 @@ p{
     text-transform: uppercase;
     @include media(phone-only){
         font-size: 10px;
-        a{
-            font-size: 10px;
-        }
     }
 }
 

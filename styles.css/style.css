@@ -27,6 +27,7 @@ html, body {
 .scroll-back a {
   color: #FFFFFF;
   font-size: 2.0833333333vw;
+  font-family: "Manrope", sans-serif;
 }
 .scroll-back:hover {
   background-color: #5C8692;
@@ -120,6 +121,8 @@ h2 {
     font-size: 25px;
     line-height: 35px;
   }
+}
+@media (max-width: 600px) {
   h2 br {
     display: none;
   }
@@ -179,11 +182,21 @@ p {
   border: 0.1388888889vw solid #5C8692;
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  .btn-clear-bg {
+    border: 1px solid #5C8692;
+  }
+}
 .btn-clear-bg a {
   color: #141414;
   font-size: 0.9027777778vw;
   font-family: "Manrope", sans-serif;
   text-transform: uppercase;
+}
+@media (max-width: 600px) {
+  .btn-clear-bg a {
+    font-size: 10px;
+  }
 }
 .btn-clear-bg:hover {
   background-color: #EBF3F5;
@@ -194,11 +207,6 @@ p {
 .btn-clear-bg:active a {
   color: #FFFFFF;
 }
-@media (max-width: 600px) {
-  .btn-clear-bg {
-    border: 1px solid #5C8692;
-  }
-}
 
 .highlights {
   color: #5C8692;
@@ -208,9 +216,6 @@ p {
 }
 @media (max-width: 600px) {
   .highlights {
-    font-size: 10px;
-  }
-  .highlights a {
     font-size: 10px;
   }
 }
