@@ -23,11 +23,12 @@ html, body {
   height: 3.4722222222vw;
   cursor: pointer;
   opacity: 0.5;
+  padding: 0.3472222222vw;
+  z-index: 99;
 }
-.scroll-back a {
-  color: #FFFFFF;
-  font-size: 2.0833333333vw;
-  font-family: "Manrope", sans-serif;
+.scroll-back img {
+  width: 100%;
+  transform: rotate(180deg);
 }
 .scroll-back:hover {
   background-color: #5C8692;
@@ -35,11 +36,9 @@ html, body {
 }
 @media (max-width: 600px) {
   .scroll-back {
-    width: 30px;
-    height: 30px;
-  }
-  .scroll-back a {
-    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
   }
 }
 
