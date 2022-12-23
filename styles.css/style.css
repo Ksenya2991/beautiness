@@ -39,6 +39,7 @@ html, body {
     width: 35px;
     height: 35px;
     padding: 5px;
+    right: 2%;
   }
 }
 
@@ -52,7 +53,7 @@ html, body {
   .burger-menu .burger {
     top: 10px;
     left: 10px;
-    z-index: 2;
+    z-index: 5;
     width: 35px;
     height: 35px;
     border: none;
