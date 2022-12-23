@@ -14,12 +14,42 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // border: 1px solid black;
+
 }
 
 html, body{
     width: 100%;
+    scroll-behavior: smooth;
     background-color: $c-white;
+}
+
+.scroll-back{
+    position: fixed;
+    display: none;
+    right: 3%;
+    bottom: 5%;
+    border-radius: 50%;
+    background-color: $c-bell-blue;
+    border: none;
+    width: toVw(50px);
+    height: toVw(50px);
+    cursor: pointer;
+    opacity: 0.5;
+    a{
+        color: $c-white;
+        font-size: toVw(30px);
+    }
+    &:hover{
+        background-color: $c-bell-blue;
+        opacity: 1;
+    }
+    @include media(phone-only){
+        width: 30px;
+        height: 30px;
+        a{
+            font-size: 20px;
+        }
+    }
 }
 
 .burger-menu{
@@ -95,9 +125,7 @@ h2{
     @include media(phone-only){
         font-size: 25px;
         line-height: 35px;
-    }
-    br{
-        @include media(phone-only){
+        br{
             display: none;
         }
     }
@@ -125,10 +153,6 @@ p{
     }
 }
 
-.active{
-    color: #5C8692;;
-}
-
 .btn-blue-bg{
     border: none;
     background-color: $c-bell-blue;
@@ -154,17 +178,11 @@ p{
     background-color: transparent;
     border: toVw(2px) solid $c-bell-blue;
     cursor: pointer;
-    @include media(phone-only){
-        border: 1px solid $c-bell-blue;
-    }
     a{
         color: $c-dark;
         font-size: toVw(13px);
         font-family: 'Manrope', sans-serif;
         text-transform: uppercase;
-        @include media(phone-only){
-            font-size: 10px;
-        }
     }
     &:hover{
         background-color: $c-light-blue;
@@ -175,6 +193,9 @@ p{
             color: $c-white;
         }
     }
+    @include media(phone-only){
+        border: 1px solid $c-bell-blue;
+    }
 }
 
 .highlights{
@@ -184,6 +205,9 @@ p{
     text-transform: uppercase;
     @include media(phone-only){
         font-size: 10px;
+        a{
+            font-size: 10px;
+        }
     }
 }
 
@@ -247,6 +271,9 @@ p{
                     font-family: 'Manrope', sans-serif;
                     &:hover{
                         border-bottom: toVw(2px) solid $c-bell-blue;
+                    }
+                    &:active{
+                        color: $c-bell-blue;
                     }
                 }
             }
