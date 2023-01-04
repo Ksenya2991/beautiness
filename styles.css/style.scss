@@ -147,7 +147,7 @@ h3{
 
 p{
     color: $c-brown;
-    line-height: 30px;
+    line-height: toVw(30px);
     font-size: toVw(18px);
     font-family: 'Manrope', sans-serif;
     @include media(phone-only){

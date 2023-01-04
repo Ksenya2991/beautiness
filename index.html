@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beautiness</title>
     <link rel="stylesheet" href="./styles.css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <button class="scroll-back"><a href="#"><img src="https://www.dragonsourcing.com/wp-content/uploads/2020/09/dow.png" alt="arrow"></a></button>
@@ -78,7 +79,7 @@
     </header>
     
     <section class="catalog">
-        <div class="catalog__item">
+        <div class="catalog__item animate__animated item-1" style="opacity: 0;">
             <div class="catalog__item__photo">
                 <img src="./imgs/catalog-massage.jpg" alt="">
             </div>
@@ -102,7 +103,7 @@
                 <button class="btn btn-clear-bg"><a href="#">Read more</a></button>
             </div>
         </div>
-        <div class="catalog__item">
+        <div class="catalog__item animate__animated item-2" style="opacity: 0;">
             <div class="catalog__item__photo">
                 <img src="./imgs/catalog-treatment.jpg" alt="">
             </div>
@@ -118,7 +119,7 @@
 
     <section class="about">
         <div class="about__wrapper">
-            <div class="about__wrapper__content">
+            <div class="about__wrapper__content animate__animated" style="opacity: 0;">
                 <span class="highlights">Take Your Care</span>
                 <h2>Elevate Your Lifestyle by Bring Balance and Well <br> Being Into Your Life</h2>
                 <p>Designed to allow you to unwind and feel confident that you’re in good, caring hands. Our first priority is cleanliness. We have a full-time staff whose job is to ensure that the environment at Beautyness remains.</p>
@@ -149,14 +150,14 @@
                     </div>
                 </div>
             </div>
-            <div class="about__wrapper__photo">
+            <div class="about__wrapper__photo animate__animated" style="opacity: 0;">
                 <img src="./imgs/img-for-about-section.svg" alt="">
             </div>
         </div>
     </section>
     
     <section class="services">
-        <div class="services__title">
+        <div class="services__title animate__animated" style="opacity: 0;">
             <span class="highlights">Our Services</span>
             <h2>Creative excellence and the <br> unparalleled hospitality</h2>
         </div>
@@ -231,7 +232,7 @@
     </section>
 
     <section class="reviews">
-        <div class="reviews__title">
+        <div class="reviews__title animate__animated" style="opacity: 0;">
             <span class="highlights">Testimonials</span>
             <h2>What our Customers says...</h2>
         </div>
@@ -280,7 +281,7 @@
     </section>
 
     <section class="benefits">
-        <div class="benefits__title">
+        <div class="benefits__title animate__animated" style="opacity: 0;">
             <span class="highlights">Our Awesome Benefits</span>
             <h2>What you’ll get from Us</h2>
         </div>
@@ -332,7 +333,7 @@
 
     <section class="offer">
         <div class="offer__wrapper">
-            <div class="offer__wrapper__content">
+            <div class="offer__wrapper__content animate__animated" style="opacity: 0;">
                 <div class="offer__wrapper__content__title">
                     <span class="highlights">Flat Discount</span>
                     <h2>Claim upto 50% offer <br> on the most popular services...</h2>
@@ -350,7 +351,7 @@
                     </div>
                 </div>
             </div>
-            <div class="offer__wrapper__form">
+            <div class="offer__wrapper__form animate__animated" style="opacity: 0;">
                 <div class="offer__wrapper__form__container">
                     <form action="">
                         <input class="input name" type="name" name="name" id="name"><br>
@@ -508,5 +509,6 @@
     </footer>
 
     <script src="./index.js"></script>
+    <script src="./animation.js"></script>
 </body>
 </html>
