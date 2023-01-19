@@ -1277,6 +1277,7 @@ p{
             width: toVw(387px);
             @include media(phone-only){
                 width: 100%;
+                text-align: justify;
             }
             &__img{
                 width: 100%;
@@ -1318,10 +1319,16 @@ p{
                 &__title{
                     margin-top: toVw(10px);
                     margin-bottom: toVw(14px);
+                    @include media(phone-only){
+                        margin-top: 12px;
+                        margin-bottom: 10px;
+                    }
                     h3{
                         font-size: toVw(22px);
                         @include media(phone-only){
-                            font-size: 18px;
+                            font-size: 19px;
+                            line-height: 24px;
+                            text-align: center;
                         }
                     }
                 }
